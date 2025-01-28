@@ -1,8 +1,25 @@
-import React from "react"
+import React, { useState } from "react"
 
 export const Board = () => {
 
+    let number = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+
+    const [clickedNum, setClickedNum] = useState<number | null>(null);
+
+    const handleClick = (num: number) => {
+        setClickedNum(num);
+    };
+
     return(
-        <button>button</button>
+        <div>
+            {number.map((num, index) => (
+                <React.Fragment key={index}>
+                    <button onClick={() => handleClick(num)}>
+                        {clickedNum === num ? clickedNum : "□"}
+                    </button>
+                    {(index + 1) % 3 === 0 && <br />}
+                </React.Fragment>
+            ))}
+        </div>
     )
 }
