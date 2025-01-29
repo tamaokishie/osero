@@ -6,7 +6,6 @@ import { Board } from "./Board.tsx";
 const root = ReactDOM.createRoot(document.getElementById("root")!); // "root"はHTMLファイルのid属性
 root.render(
     <React.StrictMode>
-        <App />
         <Board />
     </React.StrictMode>
 );
