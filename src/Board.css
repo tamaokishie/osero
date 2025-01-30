@@ -43,4 +43,9 @@
         width: 90%;  /* 画面幅に適応 */
         max-width: 250px;  /* 最大幅を制限 */
     }
+
+    .button {
+        width: 30px;
+        height: 30px;
+    }
 }
