@@ -1,0 +1,17 @@
+/* 画面幅が 600px 以下のスマホ向けスタイル */
+@media (max-width: 600px) {
+    body {
+      font-size: 14px;  /* フォントサイズを調整 */
+      padding: 10px;    /* 余白を調整 */
+    }
+  
+    .container {
+      width: 100%;      /* 幅をスマホの画面いっぱいにする */
+      padding: 5px;
+    }
+  
+    button {
+      width: 100%;      /* ボタンを画面幅いっぱいに */
+      font-size: 16px;
+    }
+  }
