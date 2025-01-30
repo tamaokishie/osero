@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/osero/static/css/main.51733b6d.css",
+    "main.css": "/osero/static/css/main.e47053d4.css",
     "main.js": "/osero/static/js/main.f520f1dc.js",
     "index.html": "/osero/index.html",
-    "main.51733b6d.css.map": "/osero/static/css/main.51733b6d.css.map",
+    "main.e47053d4.css.map": "/osero/static/css/main.e47053d4.css.map",
     "main.f520f1dc.js.map": "/osero/static/js/main.f520f1dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.51733b6d.css",
+    "static/css/main.e47053d4.css",
     "static/js/main.f520f1dc.js"
   ]
 }
