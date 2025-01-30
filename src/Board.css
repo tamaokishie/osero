@@ -1,8 +1,19 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 50px); /* 3列で固定 */
+    grid-gap: 5px; /* ボタンの間隔 */
+    justify-content: center; /* 中央寄せ */
+    margin-top: 20px;
+}
+
 .button {
+    width: 50px;
+    height: 50px;
     background-color: lightblue;
     border: none;
-    padding: 10px 10px;
-    margin: 5px;
     cursor: pointer;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
