@@ -36,16 +36,3 @@
     background-color: rgb(255, 128, 128) !important;
     color: white;
 }
-
-/* スマホ用のスタイル調整 */
-@media (max-width: 600px) {
-    .board {
-        width: 90%;  /* 画面幅に適応 */
-        max-width: 250px;  /* 最大幅を制限 */
-    }
-
-    .button {
-        width: 30px;
-        height: 30px;
-    }
-}
