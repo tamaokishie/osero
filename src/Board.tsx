@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Board.css";
 
 export const Board = () => {
     const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-    const [marks, setMarks] = useState<{ [key: number]: "●" | "×" | undefined }>({});
+    const [clickedMarks, setClickedMarks] = useState<{ [key: number]: "●" | "×" | undefined }>({});
     const [nextMark, setNextMark] = useState<"●" | "×">("●");
 
     const handleClick = (n: number) => {
-        if (marks[n]) return;
+        if (clickedMarks[n]) return; // すでにクリック済みなら何もしない
 
-        setMarks(prev => ({
+        setClickedMarks(prev => ({
             ...prev,
             [n]: nextMark
         }));
@@ -20,20 +20,20 @@ export const Board = () => {
 
     return (
         <div className="board">
-            {num.map((n, index) => (
-                <button 
-                    key={index} 
-                    className="button"
-                    onClick={() => handleClick(n)}
-                >
-                    {marks[n] || ""}
-                </button>
-                
-            ))}
+            {num.map((n, index) => {
+                const mark = clickedMarks[n];
+                const className = `button ${mark === "●" ? "circle" : mark === "×" ? "cross" : ""}`;
+
+                return (
+                    <button 
+                        key={index} 
+                        className={className}
+                        onClick={() => handleClick(n)}
+                    >
+                        {mark || ""}
+                    </button>
+                );
+            })}
         </div>
     );
 };
-function useState<T>(arg0: {}): [any, any] {
-    throw new Error("Function not implemented.");
-}
-
